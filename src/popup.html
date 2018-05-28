@@ -1,0 +1,108 @@
+<!<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="main-container">
+			<button id="infoBtn" style="background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,0);position:absolute; right:2px;top:2px;"><img src="images/info.png" style="width:20px"></button>
+			<div class="help" id="helpDiv">
+				<div style = "margin-top:30px;margin-right:20px;margin-left:20px;">
+					<div class="row">
+					<div class="col">
+						<img src="images/logo_white.png" class="logo">
+					</div>
+				</div> <br>
+					<p >This extension does not guarantee the complete transfer of your playlist, because only those songs which are an exact match in terms of album and artist are exported to Spotify.</p>
+					<p >The developer is not responsible for any changes in your Google Play Music or Spotify or streaming configuration. Use this at your own risk.</p>
+					<p>For any feature request or bugs, please leave it in the comments.</p>
+					<p>
+						<strong>Instructions</strong><br>
+						1. Please ensure a stable internet connection to have a successful transfer.<br>
+						2. Do not close the extension, when exporting as it may dismiss the process.<br>
+						3. Follow the step by step process to ensure maximum success.
+					</p>
+					<p>
+						Support for more music streaming services coming soon. This tool is by no means supported by Spotify or Google<br><br>
+						Created by Joseph Kuriackal (@jawzf) 2018<br><br>
+						<strong>Click anywhere to dismiss!</strong>
+					</p>
+				</div>
+			</div>
+			<div class="overlay" id="busyDiv">
+				<div class="center-div">
+					<img src="images/loading.gif" style="width:150%"><br>
+				</div>
+				<div>
+					<strong id="busyMessage">Work In Progress! Please wait..</strong><br>
+					<strong id="statusMessage"></strong>
+				</div>
+			</div>
+			<div class="overlay" id="successDiv" style="display:none">
+				<div class="center-div">
+					<img src="images/success.png" style="width:150%"><br>
+				</div>
+				<div>
+					<strong id="successMessage">Success!</strong>
+				</div>
+			</div>
+			<div class="overlay" id="failureDiv" style="display:none">
+				<div class="center-div">
+					<img src="images/failure.png" style="width:150%"><br>
+				</div>
+				<div>
+					<strong id="failureMessage">Failed!</strong>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<img src="images/logo_white.png" class="logo">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						Export Google Play Music Library to Spotify<br>     <!-- <button id="testBtn" >Test Button</button> -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">Step 1:<br> <button id="gplayBtn" type="button" class="btn btn-danger"><i class="fa fa-play"></i>&nbsp;Open Google Play Music Library</button><br>
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="row">
+							<div class="col">
+								Step 2:
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								
+								<button id="spotifyAuthBtn" type="button" class="btn btn-success"><i class="fa fa-spotify"></i>&nbsp;Authorise your Spotify Account</button>
+								<button id="spotifyAuthBtnDisabled" type="button" class="btn btn-success"><i class="fa fa-spotify"></i>&nbsp;Spotify Authorised</button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">Step 3:<br> <button id="export" type="button" class="btn btn-info">Export Playlist</button><br>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<script src="config.js"></script>
+		<script src="popup.js"></script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+body{
+	color: #ffffff;
+	background-color: #000000;
+	font-size: 18px;
+}
+
+div.main-container{
+	padding-top: 30px;
+	width:500;
+	height:auto;
+	background-color:#000000;
+	text-align: center;
+}
+
+.main-container .logo {
+	width:300;
+}
+
+.main-container .container .row {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.main-container .form-control-plaintext{
+	border-color: green;
+	color: white;
+}
+
+.main-container a.btn-spotify{
+	color: green;
+	font-size: 12px;
+}
+
+.overlay{
+    background-color:rgba(0, 0, 0, 0.5);
+    color:  #fff;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
+.center-div {
+	margin-left: 45%;
+    margin-right: auto;
+    margin-top: 45%;
+    width: 50px;
+ }
+ .help{
+    background-color:rgba(0, 0, 0, 1);
+    color:  #fff;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    display: none;
+    font-size: 12px;
+}
