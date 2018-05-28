@@ -1,7 +1,6 @@
 var SPOTIFY_CLIENT_AUTH_TOKEN = "";
 var CLIENT_ID=config.CLIENT_ID;
 var CLIENT_SECRET=config.CLIENT_SECRET;
-
 statusUpdate('');
 
 $.ajax({
@@ -79,7 +78,6 @@ function authorizeSpotifyFunction() {
     $('#busyDiv').show();
     var CALLBACK_URL = chrome.identity.getRedirectURL('spotifyAuth');
     var AUTH_URL = 'https://accounts.spotify.com/authorize/?client_id=' + CLIENT_ID + '&scope=user-read-private%20user-read-email%20user-read-birthdate%20playlist-read-private%20playlist-read-collaborative%20playlist-modify-public%20playlist-modify-private%20user-read-playback-state&response_type=code&redirect_uri=' + encodeURIComponent(CALLBACK_URL);
-
     chrome.identity.launchWebAuthFlow({
         url: AUTH_URL,
         interactive: true,
