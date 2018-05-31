@@ -1,19 +1,15 @@
 var j = 0;
 var mainContainer = document.getElementById("mainContainer");
 console.log(mainContainer);
-
 var playlistJson = [];
 var FINAL_JSON = [];
-
 
 function mainCode() {
     mainContainer.scrollTop = 0;
     codeRunner();
 }
 
-
 function codeRunner() {
-
     if (j < 15188) {
         var t1 = setTimeout(function() {
             exportPlaylistCode();
@@ -25,7 +21,6 @@ function codeRunner() {
                 FINAL_JSON.push(playlistJson[d]);
             }
         }
-
         localStorage.setItem("GPLAY_LIB", JSON.stringify(FINAL_JSON));
         chrome.runtime.sendMessage({
             greeting: "gplay library",
@@ -33,10 +28,7 @@ function codeRunner() {
         }, function(response) {
             console.log(response.farewell);
         });
-
     }
-
-
 }
 
 function exportPlaylistCode() {
@@ -49,7 +41,6 @@ function exportPlaylistCode() {
             var title = l.querySelectorAll('td[data-col="title"] .column-content')[0].textContent;
             var artist = l.querySelectorAll('td[data-col="artist"] .column-content')[0].textContent;
             var album = l.querySelectorAll('td[data-col="album"] .column-content')[0].textContent;
-
             //console.log(artist + '|' + title + '|' + album);
             addTrackToJson(playlistJson, id, title, artist, album);
         }
@@ -57,9 +48,7 @@ function exportPlaylistCode() {
     j = j + 500;
     codeRunner();
 }
-
 mainCode();
-
 
 function addTrackToJson(json1, id, title, artist, album) {
     var temp = {};
