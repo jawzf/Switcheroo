@@ -1,7 +1,7 @@
 {
     "name": "switcheroo",
-    "version": "0.1.1",
-    "description": "Import Google Play Music Library to Spotify!",
+    "version": "0.1.2",
+    "description": "Transfer music libraries from Streaming Services to Spotify!",
     "permissions": ["declarativeContent", "storage", "tabs",
         "http://*/",
         "https://*/",
